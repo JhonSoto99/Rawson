@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div class="text-center">
+  <div *ngIf="loadingEmployees" class="spinner-grow  width-custom" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<app-slide-employees [dataEmployees]="dataEmployees" *ngIf="!loadingEmployees"></app-slide-employees>
+<app-footer></app-footer>

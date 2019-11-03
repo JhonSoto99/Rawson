@@ -1,0 +1,47 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ng-container>
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" [attr.data-slide-to]="index"
+          [ngClass]="{'active': index === 0}" *ngFor="let item of dataEmployees; let index = index;"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="carousel-item" [ngClass]="{'active': index === 0}" *ngFor="let item of dataEmployees; let index = index;">
+          <img class="d-block w-100" src="/assets/imgs/image.jpg">
+          <div class="carousel-caption d-none d-md-block">
+            <img class="d-block rounded mx-auto" src="/assets/imgs/profile.png">
+            <h5>{{item.name}}</h5>
+
+            <h5 class="pt-2 mb-0">User Name:</h5>
+            <p class="py-0 my-0">{{item.username}}</p>
+
+            <h5 class="pt-2 mb-0">Address:</h5>
+            <p class="py-0 my-0">{{item.address.city}}, {{item.address.street}}, {{item.address.suite}}</p>
+
+            <h5 class="pt-2 mb-0">Company:</h5>
+            <p class="py-0 my-0">{{item.company.name}}, {{item.company.bs}}, {{item.company.catchPhrase}}</p>
+
+            <h5 class="pt-2 mb-0">Contact:</h5>
+            <p class="py-0 my-0">{{item.email}}, {{item.phone}}</p>
+
+            <h5 class="pt-2 mb-0">Web Site:</h5>
+            <p class="py-0 my-0">{{item.website}}</p>
+
+          </div>
+        </div>
+    </div>
+  </ng-container>
+
+
+
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
